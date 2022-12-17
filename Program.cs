@@ -87,47 +87,54 @@
 // int res = ArrayInRange(size, first, last);
 // Console.WriteLine($"{res} numbers of the array are between {first} and {last}");
 
-// int[] CreateArray(int size, int minValue, int maxValue)
-// {
-//     int[] array = new int[size];
-//     for (int i = 0; i < size; i++)
-//     {
-//         array [i] = new Random().Next(minValue, maxValue);
-//     }
-//     return array;
-// }
 
-// void ShowArray(int [] array)
-// {
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         Console.Write($"{array} ");
-//     }
-//     Console.WriteLine();
-// }
 
 // // Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 // // [3, 7, 23, 12] -> 19
 // // [-4, -6, 89, 6] -> 0
 
-// int[] CreateArray(int size, int minValue, int maxValue)
-// {
-//     int[] array = new int[size];
-//     for (int i = 0; i < size; i++)
-//     {
-//         array [i] = new Random().Next(minValue, maxValue);
-//     }
-//     return array;
-// }
+int[] CreateArray(int size, int minValue, int maxValue)
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        array [i] = new Random().Next(minValue, maxValue);
+    }
+    return array;
+}
 
-// void ShowArray(int [] array)
-// {
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         Console.Write($"{array} ");
-//     }
-//     Console.WriteLine();
-// }
+void ShowArray(int [] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array} ");
+    }
+    Console.WriteLine();
+}
+
+int SumOfUnEvenNumbers(int [] array){
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(i%2 == 1){
+            sum = array[i] + array[i+1];
+        }
+    }
+    return sum;
+}
+
+Console.WriteLine("Enter the minimal number of the array");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter the maximal number of the array");
+int max = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter the size of the array");
+int size = Convert.ToInt32(Console.ReadLine());
+int arr = CreataArray(size, min, max);
+ShowArray(arr);
+int res = SumOfUnEvenNumbers(array);
+Console.WriteLine($"The summ of elements with uneven indexes is {res}");
+
+
 
 // // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // // [3 7 22 2 78] -> 76
