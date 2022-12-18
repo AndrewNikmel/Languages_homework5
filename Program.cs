@@ -1,7 +1,6 @@
 ﻿// // // Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 // // // [345, 897, 568, 234] -> 2
 
-// using System;
 
 
 // int[] CreateArray(int size, int minValue, int maxValue)
@@ -24,22 +23,24 @@
 //     Console.WriteLine();
 // }
 
-// void ProveArray(int[] array)
+// int ProveArray(int[] array)
 // {
+//     int count = 0;
 //     for (int i = 0; i < array.Length; i++)
 //     {
 //         if (array[i] % 2 == 0);
-//         Console.WriteLine($"{array[i]} ");
+//         count++;
 //     }
-
+//     return count;
 // }
 // Console.WriteLine("Enter the size of the array: ");
-// int size = Convert.Toint32(Console.Readline());
+// int size = Convert.ToInt32(Console.ReadLine());
 // int min = 100;
 // int max = 1000;
 // int[] arr = CreateArray(size, min, max);
 // ShowArray(arr);
-// ProveArray(arr);
+// int res = ProveArray(arr);
+// Console.WriteLine($"The amount of even numbers is {res}");
 
 
 
@@ -50,7 +51,7 @@
 // // // [10, 11, 12, 13, 14] -> 5
 
 
-// int[] CreataArray(int size, int minValue, int maxValue){
+// int[] CreateArray(int size, int minValue, int maxValue){
 //     int[] array = new int[size];
 //     for(int i = 0; i < size; i++){
 //         array[i] = new Random().Next(minValue, maxValue);
@@ -65,9 +66,13 @@
 //     Console.WriteLine();
 // }
 
-// int ArrayInRange(int [] array, int firstRange, int lastRange){
+// int ArrayInRange(int [] array){
+//     Console.WriteLine("Enter the first range of the array: ");
+//     int firstRange = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Enter the last range of the array: ");
+//     int lastRange = Convert.ToInt32(Console.ReadLine());
+//     int count = 0;
 //     for(int i = 0; i < array.Length; i++){
-//         int count = 0;
 //         if(array[i] > firstRange && array[i] < lastRange){
 //             count++;
 //         }
@@ -80,11 +85,11 @@
 // Console.WriteLine("Enter the maximal number of the array");
 // int max = Convert.ToInt32(Console.ReadLine());
 // int size = 123;
-// int arr = CreataArray(size, min, max);
+// int[] arr = CreateArray(size, min, max);
 // ShowArray(arr);
 // int first = 10;
 // int last = 99;
-// int res = ArrayInRange(size, first, last);
+// int res = ArrayInRange(arr);
 // Console.WriteLine($"{res} numbers of the array are between {first} and {last}");
 
 
@@ -129,9 +134,9 @@
 // int max = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Enter the size of the array");
 // int size = Convert.ToInt32(Console.ReadLine());
-// int arr = CreataArray(size, min, max);
+// int[] arr = CreateArray(size, min, max);
 // ShowArray(arr);
-// int res = SumOfUnEvenNumbers(array);
+// int res = SumOfUnEvenNumbers(arr);
 // Console.WriteLine($"The summ of elements with uneven indexes is {res}");
 
 
@@ -139,29 +144,58 @@
 // // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // // [3 7 22 2 78] -> 76
 
-int[] CreateArray(int size, int minValue, int maxValue)
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        array [i] = new Random().Next(minValue, maxValue);
-    }
-    return array;
-}
+// int[] CreateArray(int size, int minValue, int maxValue)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array [i] = new Random().Next(minValue, maxValue);
+//     }
+//     return array;
+// }
 
-void ShowArray(int [] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{array} ");
-    }
-    Console.WriteLine();
-}
+// void ShowArray(int [] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array} ");
+//     }
+//     Console.WriteLine();
+// }
 
-int FindMax(int [] array){
-    int max = 0;
-    for()
-}
+
+// int FindMax(int [] array){
+//     int max = 0;
+//     for(int i = 0; i < array.Length; i++){
+//         if(array[i] > max){
+//             max = array[i];
+//         }
+//     }
+//     return max;
+// }
+
+// int FindMin(int [] array){
+//     int min = 0;
+//     for(int i = 0; i < array.Length; i++){
+//         if(array[i] < array[i+1]){
+//             min = array[i];
+//         }
+//     }
+//     return min;
+// }
+
+// Console.WriteLine("Введите длину массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите минимальный элемент массива: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите максимальный элемент массива: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// int[] arr = CreateArray(size, min, max);
+// ShowArray(arr);
+// int maxy = FindMax(arr);
+// int miny = FindMin(arr);
+// int res = maxy - miny;
+// Console.WriteLine($"Разница между максимальным ({maxy}) и минимальным ({miny}) числом массива равна {res}");
 
 
 
