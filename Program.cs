@@ -199,6 +199,46 @@
 
 
 
-// // Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+// // Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, 
+// // второй и предпоследний и т.д. Результат запишите в новом массиве.
 // // [1 2 3 4 5] -> 5 8 3
-// // [6 7 3 6] -> 36 21
+// // // [6 7 3 6] -> 36 21
+
+// int[] CreateArray(int size, int minValue, int maxValue)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array [i] = new Random().Next(minValue, maxValue);
+//     }
+//     return array;
+// }
+
+// void ShowArray(int [] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void MultiArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         int mult = array[i] * array[array.Length - i];
+//         Console.WriteLine($"{mult} ");
+//     }
+    
+// }
+
+// Console.WriteLine("Введите длину массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите минимальный элемент массива: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите максимальный элемент массива: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// int[] arr = CreateArray(size, min, max);
+// ShowArray(arr);
+// MultiArray(arr);
